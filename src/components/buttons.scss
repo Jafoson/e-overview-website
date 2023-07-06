@@ -1,0 +1,39 @@
+.primary_TextButton{
+    user-select: none;
+    cursor: pointer;
+    padding: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    background-color: #6294AE;
+    font-weight: 500;
+    font-size: 20px;
+    box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+}
+.primary_TextButton:hover{
+    filter: brightness(95%);
+}
+.primary_TextButton:active{
+    filter: brightness(120%)
+}
+
+.TextButton{
+    user-select: none;
+    cursor: pointer;
+    padding: 2px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    outline: 2px solid white;
+    font-weight: 500;
+    font-size: 20px;
+}
+.TextButton:hover{
+    outline-color: #BD95D5;
+    background-color: #BD95D5;
+}
+.TextButton:active{
+    outline-color: #6294AE;
+    background-color: #6294AE;
+    box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+}
