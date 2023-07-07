@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import Nav_Link from "./Nav_Link";
-import { IDropdown } from "./Nav_Link";
+import Nav_Link from "./Link";
+import { IDropdown } from "./Link";
+import styles from "./GroupBox.module.scss";
 
 export default function Nav_Bar_GroupBox() {
   return (
-    <div className="nav_bar_groupbox">
+    <div className={styles.nav_bar_groupbox}>
       <Nav_Link path="/home" name="Home" icon="material-symbols:home-outline" />
       <Nav_Link path="/games" name="Games" icon="ion:game-controller-outline" />
       <Nav_Link

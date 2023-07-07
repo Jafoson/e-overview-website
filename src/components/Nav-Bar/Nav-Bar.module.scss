@@ -1,0 +1,23 @@
+.Nav_Bar_container {
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-inline: 16px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 16px);
+  background-color: #a671c6;
+  border-radius: 15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 1024px) {
+  .Nav_Bar_container {
+    justify-content: center;
+    width: calc(2.875rem);
+  }
+}

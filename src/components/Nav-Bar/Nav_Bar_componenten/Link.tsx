@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import React, { Dispatch, SetStateAction } from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import styles from "./Link.module.scss";
 
 export interface IDropdown {
   path: string;
@@ -13,14 +14,18 @@ interface INavLink {
   name: string;
   icon: string;
   data?: Array<IDropdown>;
+  style?: React.CSSProperties;
 }
 
-export default function Nav_Link({ path, name, icon, data }: INavLink) {
+export default function Nav_Link({ path, name, icon, data, style }: INavLink) {
   const [isDropdown, setDropdown] = useState(false);
 
   return (
     <div
-      className={isDropdown ? "Nav_Link_wrapper_active" : "Nav_Link_wrapper"}
+      style={style}
+      className={
+        isDropdown ? styles.Nav_Link_wrapper_active : styles.Nav_Link_wrapper
+      }
     >
       <div
         style={{
@@ -34,16 +39,22 @@ export default function Nav_Link({ path, name, icon, data }: INavLink) {
         <NavLink
           to={path}
           className={({ isActive, isPending }) =>
-            isPending ? "Nav_Link" : isActive ? "Nav_Link_active" : "Nav_Link"
+            isPending
+              ? styles.Nav_Link
+              : isActive
+              ? styles.Nav_Link_active
+              : styles.Nav_Link
           }
         >
-          <Icon icon={icon} className="nav_button" />
+          <Icon icon={icon} className={styles.nav_button} />
           <h2>{name}</h2>
         </NavLink>
         {data && (
           <div
             className={
-              isDropdown ? "dropdown_button_active" : "dropdown_button"
+              isDropdown
+                ? styles.dropdown_button_active
+                : styles.dropdown_button
             }
             onClick={() => {
               // if (isDropdown == false) {
@@ -55,7 +66,7 @@ export default function Nav_Link({ path, name, icon, data }: INavLink) {
             }}
           >
             <Icon
-              className="dropdown_menu"
+              className={styles.dropdown_menu}
               icon="iconamoon:arrow-right-2-light"
             />
           </div>
@@ -76,10 +87,14 @@ function DropDown_Link({ elementData }: IDopdownLink) {
     <NavLink
       to={elementData.path}
       className={({ isActive, isPending }) =>
-        isPending ? "Nav_Link" : isActive ? "Nav_Link_active" : "Nav_Link"
+        isPending
+          ? styles.Nav_Link
+          : isActive
+          ? styles.Nav_Link_active
+          : styles.Nav_Link
       }
     >
-      <div className="nav_button"></div>
+      <div className={styles.nav_button}></div>
       <h2>{elementData.name}</h2>
     </NavLink>
   );

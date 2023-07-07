@@ -1,13 +1,14 @@
 import React from "react";
-import "./Nav_Bar_Authenfication.scss";
 import TextButton from "../../Buttons";
 import { useNavigate } from "react-router-dom";
+
+import styles from "./Authenfication.module.scss";
 
 export default function Nav_Bar_Authentication() {
   const navigate = useNavigate();
 
   return (
-    <div className="Nav_Bar_Authentication_container">
+    <div className={styles.Nav_Bar_Authentication_container}>
       <TextButton
         style={{ marginRight: 8 }}
         onClick={() => {

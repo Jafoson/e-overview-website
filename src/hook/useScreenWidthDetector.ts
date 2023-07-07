@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const ScreenWidthDetector: React.FC = () => {
+const useScreenWidthDetector = () => {
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const ScreenWidthDetector: React.FC = () => {
     };
   }, []);
 
-  return <div>Aktuelle Bildschirmbreite: {screenWidth}</div>;
+  return screenWidth;
 };
 
-export default ScreenWidthDetector;
+export default useScreenWidthDetector;
