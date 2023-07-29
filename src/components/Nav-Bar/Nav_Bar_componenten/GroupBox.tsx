@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import Nav_Link from "./Link";
-import { IDropdown } from "./Link";
 import styles from "./GroupBox.module.scss";
 
 export default function Nav_Bar_GroupBox() {

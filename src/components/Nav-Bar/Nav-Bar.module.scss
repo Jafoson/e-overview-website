@@ -1,3 +1,19 @@
+@use "../../constants/colors.scss" as c;
+
+.content_container {
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
 .Nav_Bar_container {
   margin-left: 8px;
   margin-right: 8px;
@@ -6,18 +22,19 @@
   display: flex;
   flex-direction: column;
   height: calc(100vh - 16px);
-  background-color: #a671c6;
+  background-color: c.$dark_secondaryColor;
   border-radius: 15px;
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
 }
 
 @media only screen and (max-width: 1024px) {
   .Nav_Bar_container {
     justify-content: center;
     width: calc(2.875rem);
+  }
+}
+
+.light {
+  &.Nav_Bar_container {
+    background-color: c.$light_secondaryColor;
   }
 }

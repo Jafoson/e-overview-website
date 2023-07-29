@@ -1,21 +1,54 @@
-import "./App.scss";
+import "./index.scss";
 import Nav_Bar from "./components/Nav-Bar/Nav-Bar";
 import Events_Overview from "./pages/events/Events_Overview";
-import { Routes, Route } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  Navigate,
+} from "react-router-dom";
 import Home from "./pages/home/Home";
+import { ThemeContext } from "./contexts/ThemeContext";
+import Games from "./pages/games/Games";
+import Matches from "./pages/matches/Matches";
+import Teams from "./pages/teams/Teams";
+import Settings from "./pages/settings/Settings";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+import { useContext, useEffect } from "react";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Nav_Bar />,
+    children: [
+      { index: true, element: <Navigate to="/home" replace /> },
+      { path: "home", element: <Home /> },
+      { path: "games", element: <Games /> },
+      { path: "matches", element: <Matches /> },
+      { path: "teams", element: <Teams /> },
+      { path: "events", element: <Events_Overview /> },
+      { path: "test", element: <Settings /> },
+      { path: "test2", element: <Settings /> },
+      { path: "dashboard/events", element: <Events_Overview /> },
+    ],
+  },
+  { path: "/signin", element: <Login /> },
+  { path: "signup", element: <Register /> },
+]);
+
+function toggleBackground(theme: string) {
+  const root = document.documentElement;
+  root.classList.toggle("light", theme === "light");
+}
 
 function App() {
-  return (
-    <>
-      <Routes>
-        <Route
-          path="/"
-          element={<Events_Overview />}
-          children={[<Route path="/home" element={<Home />}></Route>]}
-        />
-      </Routes>
-    </>
-  );
+  const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    toggleBackground(theme);
+  }, [theme]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

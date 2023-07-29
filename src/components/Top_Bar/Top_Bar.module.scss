@@ -1,0 +1,78 @@
+@use "../../constants/colors.scss" as c;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: c.$dark_textColor;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.image {
+  margin-right: 16px;
+  margin-left: 8px;
+  height: 36px;
+  width: 36px;
+  border-radius: 100%;
+  user-select: none;
+}
+
+.profilname {
+  max-lines: 2;
+  max-width: 150px;
+  overflow: hidden;
+  color: c.$dark_textColor;
+  font-size: 17px;
+  margin-left: 8px;
+}
+.profilname:hover {
+  color: c.$dark_hoverColor;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+  color: c.$dark_textColor;
+  cursor: pointer;
+  margin-left: 2px;
+}
+.icon:hover {
+  color: c.$dark_hoverColor;
+}
+
+@media only screen and (max-width: 1024px) {
+  .profilname {
+    display: none;
+  }
+}
+
+.light {
+  &.title {
+    color: c.$light_textColor;
+  }
+  &.profilname {
+    color: c.$light_textColor;
+  }
+  &.profilname:hover {
+    color: c.$light_hoverColor;
+  }
+
+  &.icon {
+    color: c.$light_textColor;
+  }
+  &.icon:hover {
+    color: c.$light_hoverColor;
+  }
+}

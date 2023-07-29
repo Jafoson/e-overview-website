@@ -1,0 +1,55 @@
+@use "../constants/colors.scss" as c;
+
+.primary_TextButton {
+  user-select: none;
+  cursor: pointer;
+  padding: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 10px;
+  background-color: c.$dark_primaryColor;
+  font-weight: 500;
+  font-size: 20px;
+  box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+}
+.primary_TextButton:hover {
+  filter: brightness(95%);
+}
+.primary_TextButton:active {
+  filter: brightness(120%);
+}
+
+.TextButton {
+  user-select: none;
+  cursor: pointer;
+  padding: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 10px;
+  outline: 2px solid white;
+  font-weight: 500;
+  font-size: 20px;
+}
+.TextButton:hover {
+  outline-color: c.$dark_hoverColor;
+  background-color: c.$dark_hoverColor;
+}
+.TextButton:active {
+  outline-color: c.$dark_primaryColor;
+  background-color: c.$dark_primaryColor;
+  box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+}
+
+.light {
+  &.primary_TextButton {
+    background-color: c.$light_primaryColor;
+  }
+  &.TextButton:hover {
+    outline-color: c.$light_hoverColor;
+    background-color: c.$light_hoverColor;
+  }
+  &.TextButton:active {
+    outline-color: c.$light_primaryColor;
+    background-color: c.$light_primaryColor;
+  }
+}

@@ -1,47 +1,55 @@
-.Nav_Bar_profil_container{
-    cursor: pointer;
-    margin-top: 8px;
-    margin-bottom: 16px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: #6294AE;
-    box-shadow: 1px 2px 4px 0px rgba(23, 36, 44, 0.25);
-    border-radius: 10px;
+@use "../../../constants/colors.scss" as c;
+
+.Nav_Bar_profil_container {
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: c.$dark_primaryColor;
+  box-shadow: 1px 2px 4px 0px rgba(23, 36, 44, 0.25);
+  border-radius: 10px;
 }
-.Nav_Bar_profil_container:hover{
-    filter: brightness(95%);
+.Nav_Bar_profil_container:hover {
+  filter: brightness(95%);
 }
 
-.Nav_Bar_profil_pictures{
-    user-select: none;
-    margin: 8px;
-    height: 64px;
-    width: 64px;
-    border-radius: 100%;
-    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.25);
-    object-position: right;
+.Nav_Bar_profil_pictures {
+  user-select: none;
+  margin: 8px;
+  height: 64px;
+  width: 64px;
+  border-radius: 100%;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  object-position: right;
 }
 
-.Nav_Bar_profil_data{
-    justify-content: center;
-    height: 100%;
-    margin-right: 8px;
-    display: flex;
-    flex-direction: column;
-    // background-color: red;
-    width: 100%;
+.Nav_Bar_profil_data {
+  justify-content: center;
+  height: 100%;
+  margin-right: 8px;
+  display: flex;
+  flex-direction: column;
+  // background-color: red;
+  width: 100%;
 }
 
-.Nav_Bar_profil_data{
-    user-select: none;
-    // background-color: #6294AE;
-    color: #E9ECE3;
-    font-size: 1.0625rem;
+.Nav_Bar_profil_data {
+  user-select: none;
+  // background-color: #6294AE;
+  color: #e9ece3;
+  font-size: 1.0625rem;
 }
 
-.Nav_Bar_nickname{
-    // background-color: #6294AE;
-    color: #E9ECE3;
-    font-size: 0.75rem;
+.Nav_Bar_nickname {
+  // background-color: #6294AE;
+  color: #e9ece3;
+  font-size: 0.75rem;
+}
+
+.light {
+  &.Nav_Bar_profil_container {
+    background: c.$light_primaryColor;
+  }
 }

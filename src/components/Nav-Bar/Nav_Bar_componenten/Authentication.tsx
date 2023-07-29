@@ -1,8 +1,8 @@
-import React from "react";
 import TextButton from "../../Buttons";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./Authenfication.module.scss";
+// import { colorScheme } from "../../../constants/color";
 
 export default function Nav_Bar_Authentication() {
   const navigate = useNavigate();
@@ -18,6 +18,7 @@ export default function Nav_Bar_Authentication() {
         primary={false}
       />
       <TextButton
+        // color={colorScheme.primaryColor}
         style={{ marginLeft: 8 }}
         onClick={() => {
           navigate("/signup");

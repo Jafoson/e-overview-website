@@ -1,3 +1,5 @@
+@use "../../../constants/colors.scss" as c;
+
 .searchbar {
   width: 100%;
   height: 2.5rem;
@@ -7,7 +9,7 @@
   padding-top: 2px;
   padding-bottom: 2px;
   box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
-  background: #bd95d5;
+  background: c.$dark_searchbarColor;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -40,5 +42,11 @@
 @media only screen and (max-width: 1024px) {
   .searchbar {
     visibility: hidden;
+  }
+}
+
+.light {
+  &.searchbar > div {
+    background: c.$light_searchbarColor;
   }
 }

@@ -1,11 +1,13 @@
+@use "./constants/colors.scss" as c;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: dark light;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #E9ECE3;;
+  background-color: c.$dark_backgroundColor;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,11 +16,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
+:root.light {
+  background-color: c.$light_backgroundColor;
+}
+
 a {
   font-weight: 500;
   text-decoration: inherit;
 }
-
 
 body {
   margin: 0;
@@ -50,14 +55,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

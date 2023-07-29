@@ -1,5 +1,7 @@
-.top_bar_container {
-  margin-top: 16px;
+@use "../../../constants/colors.scss" as c;
+
+.top_content_container {
+  margin-top: 8px;
   height: 4rem;
   width: 100%;
   font-size: 17px;
@@ -9,12 +11,7 @@
   flex-direction: row;
 }
 
-.top_bar_container > h1 {
-  font-size: 1.625rem;
-  font-weight: 600;
-}
-
-.top_bar_container > div {
+.top_content_container > div {
   cursor: pointer;
   width: 2.5rem;
   height: 2.5rem;
@@ -24,41 +21,55 @@
   align-items: center;
 }
 
-.top_bar_container > div:hover {
+.top_content_container > div:hover {
   filter: brightness(95%);
-  background-color: #bd95d5;
+  background-color: c.$dark_hoverColor;
 }
 
-.top_bar_container > div:active {
-  background: #6294ae;
+.top_content_container > div:active {
+  background: c.$dark_primaryColor;
 }
 
-.top_bar_container > div > .Side_Bar_popup_icon {
+.top_content_container > div > .Side_Bar_popup_icon {
   rotate: 90deg;
   font-size: 1.875rem;
 }
 
+.logo {
+  height: 80px;
+  color: c.$dark_secondaryTextColor;
+}
+
 @media only screen and (max-width: 1024px) {
-  .top_bar_container {
+  .top_content_container {
     justify-content: center;
   }
 
-  .top_bar_container > h1 {
+  .top_content_container > h1 {
     visibility: hidden;
     font-size: 0.1px;
   }
 
-  .top_bar_container > h1::first-letter {
+  .top_content_container > h1::first-letter {
     visibility: visible;
     font-size: 1.625rem;
     font-weight: 600;
   }
 
-  .top_bar_container > div {
+  .top_content_container > div {
     display: none;
   }
 
-  .top_bar_container > div > .Side_Bar_popup_icon {
+  .top_content_container > div > .Side_Bar_popup_icon {
     display: none;
+  }
+}
+
+.light {
+  &.top_content_container > div:hover {
+    background-color: c.$light_hoverColor;
+  }
+  &.top_content_container > div:active {
+    background: c.$light_primaryColor;
   }
 }
