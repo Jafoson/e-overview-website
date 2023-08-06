@@ -4,43 +4,34 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { titleContext } from "../../contexts/TitleContext";
+import { theme } from "../helper/variables";
 
 export default function Top_Bar() {
   const getTitleContext = useContext(titleContext);
   const getThemeContext = useContext(ThemeContext);
   return (
     <div className={styles.container}>
-      <h1
-        className={`${styles.title} ${
-          getThemeContext.theme === "light" ? styles["light"] : ""
-        }`}
-      >
+      <h1 className={theme({ styles: styles, name: "title" })}>
         {getTitleContext.title}
       </h1>
       <div className={styles.content}>
         <Icon
-          className={`${styles.icon} ${
-            getThemeContext.theme === "light" ? styles["light"] : ""
-          }`}
+          className={theme({ styles: styles, name: "icon" })}
           onClick={() => {
             getThemeContext.switchTheme();
           }}
           icon={
-            getThemeContext.theme === "dark"
+            getThemeContext.theme === "light"
               ? "clarity:sun-solid"
               : "clarity:moon-solid"
           }
         />
         <Icon
-          className={`${styles.icon} ${
-            getThemeContext.theme === "light" ? styles["light"] : ""
-          }`}
+          className={theme({ styles: styles, name: "icon" })}
           icon="mdi:bell"
         />
         <NavLink
-          className={`${styles.profilname} ${
-            getThemeContext.theme === "light" ? styles["light"] : ""
-          }`}
+          className={theme({ styles: styles, name: "profilname" })}
           to={"/profil"}
         >
           Max Mustermann

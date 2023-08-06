@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { Outlet } from "react-router-dom";
 import Nav_Bar_top_content from "./Nav_Bar_componenten/Top_content.tsx";
 import Nav_Bar_searchbar from "./Nav_Bar_componenten/Searchbar.tsx";
@@ -8,21 +7,17 @@ import Nav_Link from "./Nav_Bar_componenten/Link.tsx";
 // import Nav_Bar_Authentication from "./Nav_Bar_componenten/Authentication.tsx";
 // import useScreenWidthDetector from "../../hook/useScreenWidthDetector.ts";
 import styles from "./Nav-Bar.module.scss";
-import { ThemeContext } from "../../contexts/ThemeContext.tsx";
+
 import Top_Bar from "../Top_Bar/Top_Bar.tsx";
 import TitleProvider from "../../contexts/TitleContext.tsx";
+import { theme } from "../helper/variables.tsx";
 
 export default function Nav_Bar() {
   // const screenWidth = useScreenWidthDetector();
-  const getThemeContext = useContext(ThemeContext);
   return (
     <TitleProvider>
       <div className={styles.content}>
-        <div
-          className={`${styles.Nav_Bar_container} ${
-            getThemeContext.theme === "light" ? styles["light"] : ""
-          }`}
-        >
+        <div className={theme({ styles: styles, name: "Nav_Bar_container" })}>
           <Nav_Bar_top_content />
           <Nav_Bar_searchbar />
           <Nav_Bar_GroupBox />
@@ -42,7 +37,9 @@ export default function Nav_Bar() {
         </div>
         <div className={styles.content_container}>
           <Top_Bar />
-          <Outlet />
+          <div className={styles.content_wrapper}>
+            <Outlet />
+          </div>
         </div>
       </div>
     </TitleProvider>

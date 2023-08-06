@@ -15,11 +15,9 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
 :root.light {
   background-color: c.$light_backgroundColor;
 }
-
 a {
   font-weight: 500;
   text-decoration: inherit;

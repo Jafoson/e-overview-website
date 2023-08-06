@@ -1,6 +1,8 @@
 @use "../../constants/colors.scss" as c;
 
 .content_container {
+  overflow-x: hidden;
+  height: 100vh;
   margin-left: 12px;
   display: flex;
   flex-direction: column;
@@ -14,7 +16,16 @@
   flex-direction: row;
 }
 
+.content_wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
 .Nav_Bar_container {
+  overflow: hidden;
+  max-width: 240px;
+  position: relative;
+  margin-top: 8px;
   margin-left: 8px;
   margin-right: 8px;
   padding-inline: 16px;
@@ -28,8 +39,9 @@
 
 @media only screen and (max-width: 1024px) {
   .Nav_Bar_container {
+    max-width: 2.875rem;
     justify-content: center;
-    width: calc(2.875rem);
+    width: 2.875rem;
   }
 }
 

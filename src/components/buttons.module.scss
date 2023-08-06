@@ -3,11 +3,13 @@
 .primary_TextButton {
   user-select: none;
   cursor: pointer;
-  padding: 4px;
-  padding-left: 16px;
-  padding-right: 16px;
-  border-radius: 10px;
+  display: inline-flex;
+  padding: 0.25rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
   background-color: c.$dark_primaryColor;
+  border-radius: 15px;
   font-weight: 500;
   font-size: 20px;
   box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
@@ -22,10 +24,12 @@
 .TextButton {
   user-select: none;
   cursor: pointer;
-  padding: 2px;
-  padding-left: 16px;
-  padding-right: 16px;
-  border-radius: 10px;
+  display: inline-flex;
+  padding: 0.25rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 15px;
   outline: 2px solid white;
   font-weight: 500;
   font-size: 20px;

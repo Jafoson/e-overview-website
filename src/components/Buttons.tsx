@@ -1,6 +1,6 @@
-import React, { MouseEventHandler, useContext } from "react";
+import React, { MouseEventHandler } from "react";
 import styles from "./buttons.module.scss";
-import { ThemeContext } from "../contexts/ThemeContext";
+import { theme } from "./helper/variables";
 
 interface ITextButton {
   color?: string;
@@ -23,19 +23,13 @@ export default function TextButton({
     backgroundColor: color, // Hier wird die Hintergrundfarbe auf das color-Prop gesetzt
   };
 
-  const getThemeContext = useContext(ThemeContext);
-
   return (
     <div
       style={buttonStyle}
       className={
         primary
-          ? `${styles.primary_TextButton} ${
-              getThemeContext.theme === "light" ? styles["light"] : ""
-            }`
-          : `${styles.TextButton} ${
-              getThemeContext.theme === "light" ? styles["light"] : ""
-            }`
+          ? theme({ styles: styles, name: "primary_TextButton" })
+          : theme({ styles: styles, name: "TextButton" })
       }
       onClick={onClick}
     >

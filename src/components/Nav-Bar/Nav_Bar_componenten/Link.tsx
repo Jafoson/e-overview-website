@@ -4,6 +4,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Link.module.scss";
 import { ThemeContext } from "../../../contexts/ThemeContext";
+import { theme } from "../../helper/variables";
 
 export interface IDropdown {
   path: string;
@@ -20,16 +21,13 @@ interface INavLink {
 
 export default function Nav_Link({ path, name, icon, data, style }: INavLink) {
   const [isDropdown, setDropdown] = useState(false);
-  const getThemeContext = useContext(ThemeContext);
 
   return (
     <div
       style={style}
       className={
         isDropdown
-          ? `${styles.Nav_Link_wrapper_active} ${
-              getThemeContext.theme === "light" ? styles["light"] : ""
-            }`
+          ? theme({ styles: styles, name: "Nav_Link_wrapper_active" })
           : styles.Nav_Link_wrapper
       }
     >
@@ -46,23 +44,15 @@ export default function Nav_Link({ path, name, icon, data, style }: INavLink) {
           to={path}
           className={({ isActive, isPending }) =>
             isPending
-              ? `${styles.Nav_Link} ${
-                  getThemeContext.theme === "light" ? styles["light"] : ""
-                }`
+              ? theme({ styles: styles, name: "Nav_Link" })
               : isActive
-              ? `${styles.Nav_Link_active} ${
-                  getThemeContext.theme === "light" ? styles["light"] : ""
-                }`
-              : `${styles.Nav_Link} ${
-                  getThemeContext.theme === "light" ? styles["light"] : ""
-                }`
+              ? theme({ styles: styles, name: "Nav_Link_active" })
+              : theme({ styles: styles, name: "Nav_Link" })
           }
         >
           <Icon
             icon={icon}
-            className={`${styles.nav_button} ${
-              getThemeContext.theme === "light" ? styles["light"] : ""
-            }`}
+            className={theme({ styles: styles, name: "nav_button" })}
           />
           <h2>{name}</h2>
         </NavLink>
@@ -70,12 +60,8 @@ export default function Nav_Link({ path, name, icon, data, style }: INavLink) {
           <div
             className={
               isDropdown
-                ? `${styles.dropdown_button_active} ${
-                    getThemeContext.theme === "light" ? styles["light"] : ""
-                  }`
-                : `${styles.dropdown_button} ${
-                    getThemeContext.theme === "light" ? styles["light"] : ""
-                  }`
+                ? theme({ styles: styles, name: "dropdown_button_active" })
+                : theme({ styles: styles, name: "dropdown_button" })
             }
             onClick={() => {
               // if (isDropdown == false) {

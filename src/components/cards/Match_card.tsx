@@ -114,7 +114,7 @@ function Match_Information({ data, navigate }: MatchInformationProps) {
       </div>
       <div className={styles.match_information_wrapper}>
         <div
-          className={theme({ styles: styles, name: "text" })}
+          className={`${theme({ styles: styles, name: "text" })} link`}
           onClick={(event) => {
             event.stopPropagation();
             navigate(`/events/${data.eventID}`);
@@ -123,7 +123,7 @@ function Match_Information({ data, navigate }: MatchInformationProps) {
           {data.event}
         </div>
         <div
-          className={theme({ styles: styles, name: "text" })}
+          className={`${theme({ styles: styles, name: "text" })} link`}
           onClick={(event) => {
             event.stopPropagation();
             navigate(`/games/${data.gameID}`);
@@ -155,7 +155,7 @@ function Team_Information({ data, navigate }: TeamProps) {
           event.stopPropagation();
           navigate(`/team/${data.teamID}`);
         }}
-        className={styles.wrappen}
+        className={styles.wappen}
         src={data.wrappen_url}
         alt={`${data.name} Logo`}
       />

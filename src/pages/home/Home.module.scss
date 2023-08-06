@@ -1,0 +1,108 @@
+@use "../../constants/colors.scss" as c;
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.m_overview_container {
+  margin-left: -8px;
+  padding-right: 8px;
+  height: 100%; /* Die Höhe des sichtbaren Bereichs abzüglich der Höhe des horizontalen Scrollbalkens (z. B. 17px) */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  //   height: 100%;
+  width: 100%;
+  display: flex;
+  //   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  //   grid-gap: 0px;
+  //   grid-auto-columns: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.m_overview_content {
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  //   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  //   grid-gap: 0px;
+  //   grid-auto-columns: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.other_container {
+  min-width: none;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 500px;
+  // background: red;
+}
+
+.divider {
+  border-width: 1;
+  border-radius: 2px;
+  color: c.$dark_textColor;
+}
+
+.content_wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  height: calc(100% - 8px);
+  width: calc(100% - 32px);
+}
+
+.intern {
+  aspect-ratio: 4/3;
+  width: 100%;
+}
+
+.light {
+  &.divider {
+    color: c.$light_textColor;
+  }
+}
+
+@media (min-width: 1800px) {
+  .other_container {
+    width: 600px;
+  }
+}
+
+// .wrapper {
+//   height: 100%;
+//   width: 100%;
+//   display: flex;
+//   flex-wrap: wrap; /* Neue Regel: Wrapping der Elemente in die nächste Zeile, wenn der Platz nicht ausreicht */
+// }
+
+// .m_overview_container {
+//   height: calc(100% - 17px);
+//   overflow-x: scroll;
+//   display: grid; /* Verwenden von Grid für flexiblere Anordnung */
+//   grid-template-columns: repeat(
+//     auto-fit,
+//     minmax(390px, 1fr 1fr 1fr)
+//   ); /* Ähnlich wie zuvor, aber mit Grid */
+//   gap: 10px; /* Abstand zwischen den Elementen (z. B. 10px) */
+// }
+
+// .other_container {
+//   height: 300px;
+//   background: red;
+// }
