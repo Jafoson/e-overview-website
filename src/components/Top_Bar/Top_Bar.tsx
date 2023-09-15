@@ -32,7 +32,7 @@ export default function Top_Bar() {
         />
         <NavLink
           className={theme({ styles: styles, name: "profilname" })}
-          to={"/profil"}
+          to={"/signin"}
         >
           Max Mustermann
         </NavLink>

@@ -1,10 +1,12 @@
 @use "../../constants/colors.scss" as c;
 
 .container {
+  height: 60px;
+  min-height: 60px;
+  max-height: 60px;
   display: flex;
   flex-direction: row;
   width: 100%;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -55,6 +57,14 @@
 @media only screen and (max-width: 1024px) {
   .profilname {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    position: relative;
+    margin-left: 16px;
+    width: calc(100% - 16px);
   }
 }
 

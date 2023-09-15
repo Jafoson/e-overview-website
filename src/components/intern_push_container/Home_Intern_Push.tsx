@@ -1,45 +1,21 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { CSSProperties, useEffect, useState } from "react";
 import styles from "./Home_Intern_Push.module.scss";
-import { titleContext } from "../../contexts/TitleContext";
 import TextButton from "../Buttons";
 
 const slideStyles: CSSProperties = {
   width: "100%",
-  height: "100%",
+  aspectRatio: "4 / 3",
   borderRadius: "10px",
   backgroundSize: "cover",
   backgroundPosition: "center",
 };
 
-const rightArrowStyles: CSSProperties = {
-  userSelect: "none",
-  position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  right: "8px",
-  fontSize: "45px",
-  color: "#fff",
-  zIndex: 1,
-  cursor: "pointer",
-};
-
-const leftArrowStyles: CSSProperties = {
-  position: "absolute",
-  userSelect: "none",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  left: "8px",
-  fontSize: "45px",
-  color: "#fff",
-  zIndex: 1,
-  cursor: "pointer",
-};
-
 const sliderStyles: CSSProperties = {
+  width: "100%",
+  aspectRatio: "4 / 3",
   cursor: "pointer",
   position: "relative",
-  height: "100%",
 };
 
 const dotsContainerStyles: CSSProperties = {
@@ -59,19 +35,7 @@ const dotStyle: CSSProperties = {
   fontSize: "14px",
 };
 
-const titleStyle: CSSProperties = {
-  justifySelf: "center",
-  alignSelf: "center",
-  position: "absolute",
-  userSelect: "none",
-  maxHeight: "100%",
-  maxWidth: "100%",
-  overflow: "hidden",
-  fontSize: "32px",
-  textOverflow: "ellipsis",
-};
-
-type Slider = {
+export type Slider = {
   imageURL: string;
   title: string;
   url: string;
@@ -79,17 +43,12 @@ type Slider = {
   buttonTitle: string;
 };
 
-interface ISlides {
+export interface ISlides {
   slides: Array<Slider>;
 }
 
 export function ImageSlider({ slides }: ISlides) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
   const goToNext = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
@@ -129,7 +88,7 @@ export function ImageSlider({ slides }: ISlides) {
         className={styles.backgroundStyle}
       ></div>
       <div style={dotsContainerStyles}>
-        {slides.map((slide, slideIndex) => (
+        {slides.map((_slidne, slideIndex) => (
           <Icon
             icon={
               slideIndex === currentIndex

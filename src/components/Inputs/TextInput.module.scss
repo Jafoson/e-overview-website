@@ -1,0 +1,145 @@
+@use "../../constants/colors" as c;
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.textInputLabel{
+  color: c.$dark_textColor;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0 0 8px 0;
+}
+
+.container{
+  height: 38px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  cursor: text;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border-radius: 0.625rem;
+  border: 2px solid;
+  border-color: c.$dark_textColor;
+  transition: border-color 0.3s;
+}
+.container:hover{
+  border-color: c.$dark_hoverColor;
+}
+.success{
+  border-color: c.$succesColor !important;
+}
+.false{
+  border-color: c.$dangerColor !important;
+}
+
+.dInput{
+  color: c.$dark_textColor;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  outline: none;
+}
+.dInput::placeholder{
+  color: c.$placeholderColor;
+}
+
+.container:focus-within{
+  border-color: c.$dark_secondaryColor;
+}
+
+.dInput:-webkit-autofill,
+.dInput:-webkit-autofill:active,
+.dInput:-webkit-autofill:hover,
+.dInput:-webkit-autofill:focus{
+  -webkit-box-shadow: 0 0 0 1000px c.$dark_backgroundColor inset;
+  transition: background-color 5000s ease-in-out 0s;
+
+}
+
+.icon{
+  color: c.$dark_textColor;
+  margin: 0;
+  background-color: transparent;
+  padding: 0;
+  border-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+}
+.icon:hover{
+  color: c.$dark_hoverColor;
+}
+.icon:focus{
+  color: c.$dark_secondaryColor;
+}
+.icon:focus-visible{
+  padding: 2px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  border-color: c.$dark_secondaryColor;
+  outline: transparent;
+  color: c.$dark_secondaryColor;
+}
+
+.light{
+  color: c.$light_textColor;
+  border-color: c.$light_textColor;
+
+  &.container:hover{
+    color: c.$light_hoverColor;
+  }
+  &.container{
+    border-width: 1.5px;
+  }
+  &.dInput{
+    color: c.$light_textColor;
+  }
+  &.dInput::placeholder{
+    color: c.$placeholderColor;
+  }
+  &.container:focus-within{
+    border-color: c.$light_secondaryColor;
+  }
+
+
+  &.dInput:-webkit-autofill,
+  &.dInput:-webkit-autofill:active,
+  &.dInput:-webkit-autofill:hover,
+  &.dInput:-webkit-autofill:focus{
+    -webkit-text-fill-color: c.$light_textColor;
+    -webkit-box-shadow: 0 0 0 1000px c.$light_backgroundColor inset;
+    transition: background-color 5000s ease-in-out 0s;
+
+  }
+
+  &.icon{
+    border-color: transparent;
+    color: c.$light_textColor;
+  }
+  &.icon:hover{
+    color: c.$light_secondaryColor;
+  }
+  &.icon:focus-visible{
+    border-color: c.$light_hoverColor;
+    color: c.$light_secondaryColor;
+  }
+  &.icon:focus{
+    color: c.$light_secondaryColor;
+
+  }
+
+
+}

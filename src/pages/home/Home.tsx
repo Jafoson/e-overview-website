@@ -1,18 +1,21 @@
 import { useContext, useEffect } from "react";
-import Match_card from "../../components/cards/Match_card";
+import Match_card from "../../components/cards/Matches/Match_card";
 import { titleContext } from "../../contexts/TitleContext";
 import styles from "./Home.module.scss";
 import { theme } from "../../components/helper/variables";
-import Intern_Push, {
-  ImageSlider,
-} from "../../components/intern_push_container/Home_Intern_Push";
+import { ImageSlider } from "../../components/intern_push_container/Home_Intern_Push";
+import useScreenWidthDetector from "../../hook/useScreenWidthDetector";
+import SideContent from "../../components/Side-Content/SideContent";
+import SideScroll from "../../components/Side_scrolls/SideScroll";
 
 export default function Home() {
   useEffect(() => {
     document.title = "Home | Tournament Fox";
   }, []);
+
   const getTitleContext = useContext(titleContext);
   getTitleContext.switchTitle("Upcoming matches");
+
   const testdata = {
     teamwrappen:
       "https://media.discordapp.net/attachments/1134234924170358864/1134234963676500081/image.png?width=416&height=416",
@@ -115,26 +118,44 @@ export default function Home() {
       buttonTitle: "Jetzt bewerben!",
     },
   ];
-
+  const screenWidth = useScreenWidthDetector();
   return (
     <div className={styles.wrapper}>
-      <>
-        <div className={styles.m_overview_container}>
-          <div className={styles.m_overview_content}>
-            {matchData.map((e) => {
-              return <Match_card data={e} />;
-            })}
-          </div>
-        </div>
-      </>
-      <hr className={theme({ styles: styles, name: "divider" })} />
-      <div className={styles.other_container}>
-        <div className={styles.content_wrapper}>
-          <div className={styles.intern}>
-            <ImageSlider slides={slides} />
-          </div>
+      <div className={styles.m_overview_container}>
+        <div className={styles.m_overview_content}>
+          {screenWidth < 500 ? (
+            <>
+              <ImageSlider slides={slides} />
+              <SideScroll />
+              <div className={styles.titlewrapper}>
+                <div className={theme({ styles: styles, name: "title" })}>
+                  Upcoming matches
+                </div>
+              </div>
+            </>
+          ) : (
+            <></>
+          )}
+          {matchData.map((e) => {
+            return <Match_card data={e} />;
+          })}
         </div>
       </div>
+
+      <hr className={theme({ styles: styles, name: "divider" })} />
+      <SideContent>
+        <div className={styles.intern}>
+          <ImageSlider slides={slides} />
+          <h1 className={theme({ styles: styles, name: "subtitle" })}>
+            common Games
+          </h1>
+          <SideScroll />
+          <h1 className={theme({ styles: styles, name: "subtitle" })}>
+            common Events
+          </h1>
+          <SideScroll />
+        </div>
+      </SideContent>
     </div>
   );
 }

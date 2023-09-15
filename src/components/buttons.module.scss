@@ -1,18 +1,26 @@
 @use "../constants/colors.scss" as c;
 
+.buttonWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .primary_TextButton {
+  display: flex;
+  outline: transparent !important;
+  border: 2px solid transparent;
   user-select: none;
   cursor: pointer;
-  display: inline-flex;
-  padding: 0.25rem 1rem;
+  display: flex;
+  padding: 0.5rem 4rem;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
-  background-color: c.$dark_primaryColor;
-  border-radius: 15px;
-  font-weight: 500;
-  font-size: 20px;
-  box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+  border-radius: 0.9375rem;
+  background: c.$dark_primaryColor;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.25);
+
 }
 .primary_TextButton:hover {
   filter: brightness(95%);
@@ -21,7 +29,29 @@
   filter: brightness(120%);
 }
 
+.primary_TextButton:active {
+  outline-color: c.$dark_primaryColor;
+  background-color: c.$dark_primaryColor;
+  box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+}
+
+.primary_TextButton:focus{
+  box-sizing: border-box;
+  border-color: c.$dark_textColor;
+}
+.text{
+  margin: 0;
+  color: c.$dark_textColor;
+  text-align: right;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 .TextButton {
+  border-color: transparent;
+  outline: transparent !important;
   user-select: none;
   cursor: pointer;
   display: inline-flex;
@@ -44,7 +74,20 @@
   box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
 }
 
+.TextButton:focus{
+  box-sizing: border-box;
+  border-color: c.$dark_textColor;
+  border-width: 3px;
+}
+.TextButton:focus-visible{
+  outline: transparent;
+  box-sizing: border-box;
+  border-color: c.$dark_textColor;
+  border-width: 3px;
+}
+
 .light {
+
   &.primary_TextButton {
     background-color: c.$light_primaryColor;
   }

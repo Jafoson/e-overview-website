@@ -1,0 +1,154 @@
+@use "../../constants/colors.scss" as c;
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 32px 32px 0 32px;
+  color: c.$dark_textColor;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.contentWrapper{
+  box-sizing: border-box;
+  padding-right: 32px;
+  flex: 0.5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  //background-color: red;
+}
+
+.previewWrapper{
+  height: calc(100% - 32px);
+  flex: 0.5;
+  border-radius: 15px;
+  background-color: c.$dark_secondaryColor;
+}
+
+.logoWrapper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  //background-color: red;
+  margin-bottom: 32px;
+
+}
+
+.backIcon{
+  font-size: 24px;
+
+}
+
+.formWrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.formGroup{
+  display: flex;
+  flex-direction: column;
+}
+
+.finput{
+  width: 100%;
+  padding: 4px 8px 4px 8px;
+  border-radius: 5px;
+  border-color: c.$dark_textColor;
+  border-width: 1px;
+
+}
+
+.content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  //background-color: #4bff00;
+}
+
+.rememberWrapper{
+  margin-top: -8px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rememberCheckWrapper{
+  gap: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo{
+  width: 146px;
+  color: c.$dark_textColor;
+}
+
+
+/* IhrStil.module.css */
+
+/* Standardstil für die Checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid c.$dark_textColor; /* Weiße 1px-Border */
+  border-radius: 5px; /* 5px Radius */
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Hintergrundfarbe der Checkbox, wenn ausgewählt */
+input[type="checkbox"]:checked {
+  background-color: c.$dark_hoverColor;
+  border: none;
+}
+
+/* Pseudo-Element für das Häkchen */
+input[type="checkbox"]:checked::before {
+  content: "\2713"; /* Zeichen für ein Häkchen (✓) */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: c.$dark_textColor; /* Weiße Farbe für das Häkchen */
+  font-size: 16px;
+}
+
+
+
+
+.light{
+  &input[type="checkbox"]:checked:before{
+    color: c.$light_textColor;
+  }
+  &input[type="checkbox"]:checked{
+    background-color: c.$light_secondaryColor;
+  }
+  &input[type="checkbox"]{
+    border-color: c.$light_textColor;
+  }
+
+  color: c.$light_textColor;
+  &.previewWrapper{
+    background-color: c.$light_secondaryColor;
+  }
+}
+

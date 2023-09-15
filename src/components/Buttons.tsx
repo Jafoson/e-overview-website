@@ -6,7 +6,7 @@ interface ITextButton {
   color?: string;
   primary?: boolean;
   content: string;
-  onClick: MouseEventHandler<HTMLDivElement>;
+  onClick: MouseEventHandler<HTMLButtonElement>;
   style?: React.CSSProperties;
   className?: string;
 }
@@ -20,20 +20,22 @@ export default function TextButton({
 }: ITextButton) {
   const buttonStyle = {
     ...style,
-    backgroundColor: color, // Hier wird die Hintergrundfarbe auf das color-Prop gesetzt
+    backgroundColor: color,
   };
 
   return (
-    <div
-      style={buttonStyle}
-      className={
-        primary
-          ? theme({ styles: styles, name: "primary_TextButton" })
-          : theme({ styles: styles, name: "TextButton" })
-      }
-      onClick={onClick}
-    >
-      {content}
+    <div className={styles.buttonWrapper}>
+      <button
+          onClick={onClick}
+          style={buttonStyle}
+          className={
+            primary
+                ? theme({ styles: styles, name: "primary_TextButton" })
+                : theme({ styles: styles, name: "TextButton" })
+          }
+      >
+        <p className={styles.text}>{content}</p>
+      </button>
     </div>
   );
 }

@@ -15,6 +15,7 @@ import Settings from "./pages/settings/Settings";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import { useContext, useEffect } from "react";
+import MatchDetail from "./pages/matchDetail/MatchDetail";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "home", element: <Home /> },
       { path: "games", element: <Games /> },
       { path: "matches", element: <Matches /> },
+      { path: "matches/:matchID", element: <MatchDetail /> },
       { path: "teams", element: <Teams /> },
       { path: "events", element: <Events_Overview /> },
       { path: "test", element: <Settings /> },

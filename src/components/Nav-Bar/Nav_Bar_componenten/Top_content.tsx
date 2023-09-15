@@ -1,4 +1,3 @@
-import { Icon } from "@iconify/react";
 import styles from "./Top_content.module.scss";
 import logo from "../../../assets/Logo/TournFox_Logo_25072023.svg";
 import largeLogo from "../../../assets/Logo/TournFox_LogowithFont_25072023.svg";
@@ -15,9 +14,6 @@ export default function Nav_Bar_top_content() {
         alt="TournamentFox Logo"
         className={styles.logo}
       ></img>
-      <div>
-        <Icon className={styles.Side_Bar_popup_icon} icon="quill:collapse" />
-      </div>
     </div>
   );
 }
