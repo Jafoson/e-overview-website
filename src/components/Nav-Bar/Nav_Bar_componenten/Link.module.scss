@@ -3,7 +3,7 @@
 .Nav_Link_active {
   user-select: none;
   background: c.$dark_primaryColor;
-  box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+  box-shadow: 1px 2px 4px 0 rgba(88, 45, 113, 0.25);
   // box-shadow: 1px 2px 4px 0px rgba(23, 36, 44, 0.25);
   // // border: 1px solid #E9ECE3;
   border-radius: 10px;
@@ -43,7 +43,7 @@
   font-weight: 500;
   color: #e9ece3;
   background: c.$dark_primaryColor;
-  box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+  box-shadow: 1px 2px 4px 0 rgba(88, 45, 113, 0.25);
   // border: 1px solid #E9ECE3
   // box-shadow: 1px 2px 4px 0px rgba(23, 36, 44, 0.25);
 }
@@ -112,7 +112,6 @@
   max-width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
   font-size: 1.0625rem;
   font-weight: 400;
   width: 100%;
@@ -124,7 +123,6 @@
   max-width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
   font-size: 1.0625rem;
   font-weight: 500;
   width: 100%;

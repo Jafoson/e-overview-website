@@ -1,7 +1,7 @@
 .Nav_Link_active {
   user-select: none;
   background: #377fa4;
-  box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+  box-shadow: 1px 2px 4px 0 rgba(88, 45, 113, 0.25);
   border-radius: 10px;
   height: 2.875rem;
   width: 100%;
@@ -37,7 +37,7 @@
   font-weight: 500;
   color: #e9ece3;
   background: #377fa4;
-  box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+  box-shadow: 1px 2px 4px 0 rgba(88, 45, 113, 0.25);
 }
 
 .nav_button {
@@ -100,7 +100,6 @@
   max-width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
   font-size: 1.0625rem;
   font-weight: 400;
   width: 100%;
@@ -112,7 +111,6 @@
   max-width: 100%;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
   font-size: 1.0625rem;
   font-weight: 500;
   width: 100%;
