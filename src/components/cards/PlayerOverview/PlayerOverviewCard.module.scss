@@ -1,0 +1,91 @@
+@use "../../../constants/colors.scss" as c;
+
+.container {
+  margin-top: 32px;
+  min-width: 15rem;
+  max-width: 40rem;
+  width: 100%;
+}
+
+.title {
+  color: c.$dark_textColor;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+
+.wrapper {
+  border-radius: 0.9375rem;
+  background-color: c.$dark_cardColor;
+  box-sizing: border-box;
+  padding: 16px;
+  box-shadow: 1px 2px 4px 0px rgba(66, 66, 66, 0.25);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+// TeamPlayersList
+.list {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+// PlayerData
+.leftPlayer {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rightPlayer {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+.playerData {
+  display: flex;
+  flex-direction: column;
+}
+
+.playerImage {
+  width: 4.75rem;
+  height: 4.75rem;
+}
+.playerName {
+  color: c.$dark_textColor;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.playerRole {
+  color: c.$dark_textColor;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.light {
+  color: c.$light_textColor;
+  &.wrapper {
+    background-color: c.$light_cardColor;
+  }
+}

@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+  width: 100%;
+  background-color: red;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+  background-color: green;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.slideStyles {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.titleStyle {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 4px;
+  text-align: center;
+  user-select: none;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 32px;
+  text-overflow: ellipsis;
+}
+
+.backgroundStyle {
+  filter: brightness(50%);
+}
+
+.contentContainer {
+  z-index: 1;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  margin-top: 32px;
+  position: absolute;
+  height: calc(100% - 64px);
+  width: calc(100% - 16px);
+  overflow: hidden;
+}
+
+.rightArrowStyles {
+  visibility: hidden;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 8px;
+  font-size: 45px;
+  color: #e9ece3;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.rightArrowStyles:hover {
+  visibility: visible;
+}
+
+/*# sourceMappingURL=Home_Intern_Push.module.css.map */

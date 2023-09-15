@@ -6,7 +6,7 @@ import logo from "../../assets/Logo/TournFox_LogowithFont_25072023.svg";
 import {useState} from "react";
 import TextButton from "../../components/Buttons.tsx";
 import {PasswordInput, TextInput} from "../../components/Inputs/TextInput.tsx";
-import {Checkbox} from "../../components/Inputs/Checkbox.tsx";
+/*import {Checkbox} from "../../components/Inputs/Checkbox.tsx";*/
 
 export default function Login() {
     const navigate = useNavigate();
@@ -38,6 +38,12 @@ export default function Login() {
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
     };
+    setValidateData({
+        userFalse: false,
+        userRight: false,
+        passwordFalse: false,
+        passwordRight: false,
+    });
 
     return (<div className={styles.wrapper}>
         <div className={styles.container}>

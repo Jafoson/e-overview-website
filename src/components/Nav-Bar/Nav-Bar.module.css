@@ -1,0 +1,69 @@
+.content_container {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh;
+  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.content_wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+.Nav_Bar_container {
+  overflow: hidden;
+  max-width: 240px;
+  position: relative;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-inline: 16px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 16px);
+  background-color: #472e56;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .Nav_Bar_container {
+    max-width: 2.875rem;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .Nav_Bar_container {
+    display: none;
+  }
+  .content_container {
+    margin-left: 0;
+  }
+  .content {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+  }
+  .content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.light.Nav_Bar_container {
+  background-color: #9661ca;
+}
+
+/*# sourceMappingURL=Nav-Bar.module.css.map */

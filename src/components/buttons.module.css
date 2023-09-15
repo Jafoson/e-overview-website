@@ -1,0 +1,104 @@
+.buttonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.primary_TextButton {
+  display: flex;
+  outline: transparent !important;
+  border: 2px solid transparent;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0.5rem 4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.9375rem;
+  background: #377fa4;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.primary_TextButton:hover {
+  filter: brightness(95%);
+}
+
+.primary_TextButton:active {
+  filter: brightness(120%);
+}
+
+.primary_TextButton:active {
+  outline-color: #377fa4;
+  background-color: #377fa4;
+  box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+}
+
+.primary_TextButton:focus {
+  box-sizing: border-box;
+  border-color: #e9ece3;
+}
+
+.text {
+  margin: 0;
+  color: #e9ece3;
+  text-align: right;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.TextButton {
+  border-color: transparent;
+  outline: transparent !important;
+  user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0.25rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 15px;
+  outline: 2px solid white;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.TextButton:hover {
+  outline-color: #704988;
+  background-color: #704988;
+}
+
+.TextButton:active {
+  outline-color: #377fa4;
+  background-color: #377fa4;
+  box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+}
+
+.TextButton:focus {
+  box-sizing: border-box;
+  border-color: #e9ece3;
+  border-width: 3px;
+}
+
+.TextButton:focus-visible {
+  outline: transparent;
+  box-sizing: border-box;
+  border-color: #e9ece3;
+  border-width: 3px;
+}
+
+.light.primary_TextButton {
+  background-color: #3e86ab;
+}
+.light.TextButton:hover {
+  outline-color: #b089d7;
+  background-color: #b089d7;
+}
+.light.TextButton:active {
+  outline-color: #3e86ab;
+  background-color: #3e86ab;
+}
+
+/*# sourceMappingURL=buttons.module.css.map */

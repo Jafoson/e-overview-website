@@ -1,0 +1,68 @@
+.top_content_container {
+  margin-top: 8px;
+  height: 4rem;
+  width: 100%;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.top_content_container > div {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_content_container > div:hover {
+  filter: brightness(95%);
+  background-color: #704988;
+}
+
+.top_content_container > div:active {
+  background: #377fa4;
+}
+
+.top_content_container > div > .Side_Bar_popup_icon {
+  rotate: 90deg;
+  font-size: 1.875rem;
+}
+
+.logo {
+  height: 80px;
+  color: #e9ece3;
+}
+
+@media only screen and (max-width: 1024px) {
+  .top_content_container {
+    justify-content: center;
+  }
+  .top_content_container > h1 {
+    visibility: hidden;
+    font-size: 0.1px;
+  }
+  .top_content_container > h1::first-letter {
+    visibility: visible;
+    font-size: 1.625rem;
+    font-weight: 600;
+  }
+  .top_content_container > div {
+    display: none;
+  }
+  .top_content_container > div > .Side_Bar_popup_icon {
+    display: none;
+  }
+}
+.light.top_content_container > div:hover {
+  background-color: #b089d7;
+}
+.light.top_content_container > div:active {
+  background: #3e86ab;
+}
+
+/*# sourceMappingURL=Top_content.module.css.map */

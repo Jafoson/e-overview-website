@@ -1,0 +1,79 @@
+@use "../../constants/colors.scss" as c;
+
+.container {
+  width: calc(100% - 16px);
+  height: 100%;
+  //   background: red;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  //   background: green;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  //   justify-content: center;
+  align-items: center;
+}
+
+.dateTitle {
+  margin: 16px 0 0;
+  color: c.$dark_textColor;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.dateWrapper {
+  //   background-color: red;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeTitle {
+  margin: 0 0 16px;
+  color: c.$dark_textColor;
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.light {
+  color: c.$light_textColor;
+}
+
+.socialWrapper {
+  margin: 32px 0 3px 0;
+  justify-content: center;
+  width: 100%;
+  //   background-color: red;
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.title {
+  width: 100%;
+  color: c.$dark_textColor;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.previousWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}

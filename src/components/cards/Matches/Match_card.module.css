@@ -1,0 +1,156 @@
+.container {
+  flex-shrink: 0;
+  margin: 8px 8px 16px;
+  cursor: pointer;
+  width: 26rem;
+  height: 11.625rem;
+  border-radius: 0.9375rem;
+  background: #424242;
+  box-shadow: 1px 2px 4px 0 rgba(66, 66, 66, 0.25);
+}
+
+.container:hover {
+  filter: brightness(95%);
+}
+
+.wrapper {
+  padding-top: 16px;
+  padding-left: 32px;
+  height: calc(100% - 32px);
+  width: calc(100% - 64px);
+  display: flex;
+  flex-direction: row;
+}
+
+.teamlogo_wrapper {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wrappen {
+  width: 100px;
+  height: 100px;
+}
+
+.teamname {
+  color: #e9ece3;
+  max-lines: 2;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  text-align: center;
+}
+
+.match_wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.match_score_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: #e9ece3;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.text.bold {
+  font-weight: 600;
+}
+
+.match_information_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score {
+  margin-left: 8px;
+  margin-right: 8px;
+  color: #e9ece3;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.match_type {
+  color: #e9ece3;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.winning_score {
+  margin-left: 8px;
+  margin-right: 8px;
+  color: #377fa4;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    margin-bottom: 8px;
+    width: 21.1rem;
+    height: 8.375rem;
+  }
+  .wrapper {
+    padding-left: 16px;
+    padding-top: 8px;
+    height: calc(100% - 16px);
+    width: calc(100% - 32px);
+  }
+  .teamname {
+    font-size: 0.875rem;
+  }
+  .text {
+    font-size: 0.625rem;
+  }
+  .score {
+    font-size: 2rem;
+  }
+  .winning_score {
+    font-size: 2rem;
+  }
+  .match_type {
+    font-size: 0.875rem;
+  }
+  .teamlogo_wrapper {
+    width: 5rem;
+    height: 5rem;
+    flex-shrink: 0;
+  }
+}
+.light.container {
+  background: #ffffff;
+}
+.light.teamname {
+  color: #8c8ba0;
+}
+.light.text {
+  color: #8c8ba0;
+}
+.light.score {
+  color: #8c8ba0;
+}
+.light.match_type {
+  color: #8c8ba0;
+}
+.light.winning_score {
+  color: #3e86ab;
+}
+
+/*# sourceMappingURL=Match_card.module.css.map */

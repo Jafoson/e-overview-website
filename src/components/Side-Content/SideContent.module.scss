@@ -1,0 +1,30 @@
+.other_container {
+  min-width: none;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 420px;
+  // background: red;
+}
+.content_wrapper {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  height: calc(100% - 8px);
+  width: calc(100% - 32px);
+}
+
+@media only screen and (max-width: 500px) {
+  .other_container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  .other_container {
+    width: 350x;
+  }
+}

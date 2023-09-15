@@ -1,0 +1,49 @@
+.searchbar {
+  width: 100%;
+  height: 2.5rem;
+}
+
+.searchbar > div {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  box-shadow: 1px 2px 4px 0px rgba(88, 45, 113, 0.25);
+  background: #704988;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.search_icon {
+  margin-left: 8px;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-right: 8px;
+}
+
+.search_textfield {
+  margin-right: 8px;
+  width: 100%;
+  outline: none;
+  font-size: 1.0625rem;
+  background-color: transparent;
+  border: none;
+  color: #e9ece3;
+}
+
+.search_textfield::placeholder {
+  color: #e9ece3;
+}
+
+@media only screen and (max-width: 1024px) {
+  .searchbar {
+    visibility: hidden;
+  }
+}
+.light.searchbar > div {
+  background: #b089d7;
+}
+
+/*# sourceMappingURL=Searchbar.module.css.map */

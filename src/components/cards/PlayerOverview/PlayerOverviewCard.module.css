@@ -1,0 +1,93 @@
+.container {
+  margin-top: 32px;
+  min-width: 15rem;
+  max-width: 40rem;
+  width: 100%;
+}
+
+.title {
+  color: #e9ece3;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+
+.wrapper {
+  border-radius: 0.9375rem;
+  background-color: #424242;
+  box-sizing: border-box;
+  padding: 16px;
+  box-shadow: 1px 2px 4px 0px rgba(66, 66, 66, 0.25);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.list {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.leftPlayer {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rightPlayer {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.playerData {
+  display: flex;
+  flex-direction: column;
+}
+
+.playerImage {
+  width: 4.75rem;
+  height: 4.75rem;
+}
+
+.playerName {
+  color: #e9ece3;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.playerRole {
+  color: #e9ece3;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.light {
+  color: #8c8ba0;
+}
+.light.wrapper {
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=PlayerOverviewCard.module.css.map */

@@ -1,0 +1,140 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.textInputLabel {
+  color: #e9ece3;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0 0 8px 0;
+}
+
+.container {
+  height: 38px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  cursor: text;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border-radius: 0.625rem;
+  border: 2px solid;
+  border-color: #e9ece3;
+  transition: border-color 0.3s;
+}
+
+.container:hover {
+  border-color: #704988;
+}
+
+.success {
+  border-color: #53a76c !important;
+}
+
+.false {
+  border-color: #f44336 !important;
+}
+
+.dInput {
+  color: #e9ece3;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  outline: none;
+}
+
+.dInput::placeholder {
+  color: #929292;
+}
+
+.container:focus-within {
+  border-color: #472e56;
+}
+
+.dInput:-webkit-autofill,
+.dInput:-webkit-autofill:active,
+.dInput:-webkit-autofill:hover,
+.dInput:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #171717 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.icon {
+  color: #e9ece3;
+  margin: 0;
+  background-color: transparent;
+  padding: 0;
+  border-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.icon:hover {
+  color: #704988;
+}
+
+.icon:focus {
+  color: #472e56;
+}
+
+.icon:focus-visible {
+  padding: 2px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  border-color: #472e56;
+  outline: transparent;
+  color: #472e56;
+}
+
+.light {
+  color: #8c8ba0;
+  border-color: #8c8ba0;
+}
+.light.container:hover {
+  color: #b089d7;
+}
+.light.container {
+  border-width: 1.5px;
+}
+.light.dInput {
+  color: #8c8ba0;
+}
+.light.dInput::placeholder {
+  color: #929292;
+}
+.light.container:focus-within {
+  border-color: #9661ca;
+}
+.light.dInput:-webkit-autofill, .light.dInput:-webkit-autofill:active, .light.dInput:-webkit-autofill:hover, .light.dInput:-webkit-autofill:focus {
+  -webkit-text-fill-color: #8c8ba0;
+  -webkit-box-shadow: 0 0 0 1000px #e9ece3 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.light.icon {
+  border-color: transparent;
+  color: #8c8ba0;
+}
+.light.icon:hover {
+  color: #9661ca;
+}
+.light.icon:focus-visible {
+  border-color: #b089d7;
+  color: #9661ca;
+}
+.light.icon:focus {
+  color: #9661ca;
+}
+
+/*# sourceMappingURL=TextInput.module.css.map */

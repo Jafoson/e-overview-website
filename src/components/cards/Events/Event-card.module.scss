@@ -1,0 +1,65 @@
+@use "../../../constants/colors.scss" as c;
+
+.wrapper {
+  cursor: pointer;
+  background-color: c.$dark_cardColor;
+  border-radius: 15px;
+  margin: 8px;
+  padding: 8px;
+}
+.wrapper:hover {
+  filter: brightness(90%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 85px;
+  aspect-ratio: 1;
+}
+
+.titlewrapper {
+  margin-top: 4px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  text-align: left;
+  width: 100%;
+  height: 63px;
+}
+.title {
+  color: c.$dark_textColor;
+  font-size: 16px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  height: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  .title {
+    display: none;
+  }
+  .titlewrapper {
+    display: none;
+  }
+  .logo {
+    width: 40px;
+  }
+  .wrapper {
+    margin: 16px 4px 8px 4px;
+  }
+}
+
+.light {
+  color: c.$light_textColor;
+
+  &.wrapper {
+    background-color: c.$light_cardColor;
+  }
+}

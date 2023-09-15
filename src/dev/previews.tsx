@@ -3,7 +3,7 @@ import {ComponentPreview, Previews} from "@react-buddy/ide-toolbox";
 import {PaletteTree} from "./palette";
 import Match_card from "../components/cards/Matches/Match_card.tsx";
 import App from "../App.tsx";
-import TextButton from "../components/Buttons.tsx";
+// import TextButton from "../components/Buttons.tsx";
 const testdata = {teamwrappen:
         "https://media.discordapp.net/attachments/1134234924170358864/1134234963676500081/image.png?width=416&height=416",
     team2wrapper:
@@ -35,9 +35,9 @@ const ComponentPreviews = () => {
             <ComponentPreview path="/App">
                 <App/>
             </ComponentPreview>
-            <ComponentPreview path="/TextButton">
-                <TextButton/>
-            </ComponentPreview>
+            {/*<ComponentPreview path="/TextButton">*/}
+            {/*    /!*<TextButton/>*!/*/}
+            {/*</ComponentPreview>*/}
         </Previews>
     );
 };
