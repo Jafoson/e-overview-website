@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import styles from "./Searchbar.module.scss";
-import { theme } from "../../helper/variables";
+import { theme } from "../../../helper/variables";
 
 export default function Nav_Bar_searchbar() {
   return (

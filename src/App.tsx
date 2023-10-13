@@ -16,6 +16,7 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import { useContext, useEffect } from "react";
 import MatchDetail from "./pages/matchDetail/MatchDetail";
+import EmailVerify from "./pages/email/EmailVerify";
 
 const router = createBrowserRouter([
   {
@@ -34,8 +35,9 @@ const router = createBrowserRouter([
       { path: "dashboard/events", element: <Events_Overview /> },
     ],
   },
-  { path: "/signin", element: <Login /> },
+  { path: "signin", element: <Login /> },
   { path: "signup", element: <Register /> },
+  { path: "auth/mail/verify", element: <EmailVerify /> },
 ]);
 
 function toggleBackground(theme: string) {

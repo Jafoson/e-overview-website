@@ -68,6 +68,14 @@
   }
 }
 
+.registerWrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 0.675rem;
+  margin-left: 6px;
+  margin-right: 16px;
+}
+
 .light {
   &.title {
     color: c.$light_textColor;

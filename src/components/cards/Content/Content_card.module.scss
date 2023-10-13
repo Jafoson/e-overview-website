@@ -1,0 +1,43 @@
+@use "../../../constants/colors.scss" as c;
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 16px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.9375rem;
+  background: c.$dark_cardColor;
+  box-shadow: 1px 2px 4px 0px rgba(66, 66, 66, 0.25);
+  max-width: 35rem;
+  margin: 16px;
+  min-width: 150px;
+  color: c.$dark_textColor;
+}
+.icon {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.title {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.light {
+  &.wrapper {
+    background: c.$light_cardColor;
+    color: c.$light_textColor;
+  }
+}

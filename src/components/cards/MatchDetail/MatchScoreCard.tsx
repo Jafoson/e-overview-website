@@ -1,5 +1,5 @@
 import styles from "./MatchScoreCard.module.scss";
-import { theme } from "../../helper/variables";
+import { theme } from "../../../helper/variables";
 
 export type MatchScoreData = {
   date: Date;

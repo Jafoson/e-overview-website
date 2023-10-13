@@ -1,5 +1,5 @@
 import styles from "./MatchHistoryCard.module.scss";
-import { theme } from "../../helper/variables";
+import { theme } from "../../../helper/variables";
 
 export type MatchHistoryData = {
   logoTeam1: string;

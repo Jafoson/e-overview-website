@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import Match_card from "../../components/cards/Matches/Match_card";
 import { titleContext } from "../../contexts/TitleContext";
 import styles from "./Home.module.scss";
-import { theme } from "../../components/helper/variables";
+import { theme } from "../../helper/variables";
 import { ImageSlider } from "../../components/intern_push_container/Home_Intern_Push";
 import useScreenWidthDetector from "../../hook/useScreenWidthDetector";
 import SideContent from "../../components/Side-Content/SideContent";

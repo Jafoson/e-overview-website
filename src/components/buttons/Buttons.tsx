@@ -1,6 +1,6 @@
 import React, { MouseEventHandler } from "react";
 import styles from "./buttons.module.scss";
-import { theme } from "./helper/variables";
+import { theme } from "../../helper/variables.tsx";
 
 interface ITextButton {
   color?: string;
@@ -24,18 +24,39 @@ export default function TextButton({
   };
 
   return (
-    <div className={styles.buttonWrapper}>
       <button
           onClick={onClick}
           style={buttonStyle}
           className={
-            primary
-                ? theme({ styles: styles, name: "primary_TextButton" })
-                : theme({ styles: styles, name: "TextButton" })
-          }
+              `${styles["TextButton"]}
+                ${primary
+                  ? theme({styles: styles, name: "primary"})
+                  : theme({styles: styles, name: "secondary"})}
+                `}
       >
-        <p className={styles.text}>{content}</p>
+          <p className={styles.text}>{content}</p>
       </button>
-    </div>
   );
+}
+
+export function SmallTextButton({color, primary = true, content, onClick, style}: ITextButton) {
+    const buttonStyle = {
+        ...style,
+        backgroundColor: color,
+    };
+
+    return (
+        <button
+            onClick={onClick}
+            style={buttonStyle}
+            className={
+                `${styles["smallTextButton"]}
+                ${primary
+                    ? theme({styles: styles, name: "primary"})
+                    : theme({styles: styles, name: "secondary"})}
+                `}
+        >
+            <p className={styles.text}>{content}</p>
+        </button>
+    );
 }

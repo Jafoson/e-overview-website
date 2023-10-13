@@ -1,0 +1,41 @@
+@use "../../constants/colors" as c;
+
+.buttonWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  width: 16.125rem;
+  height: 2.6875rem;
+  color: c.$dark_textColor;
+  cursor: pointer;
+  border-radius: 0.9375rem;
+  border: 2px solid c.$dark_textColor;
+  display: flex;
+  justify-content: center;
+  padding: 0 32px;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.logo{
+  color: c.$dark_textColor;
+  width: 1.6875rem;
+  height: 1.6875rem;
+  flex-shrink: 0;
+}
+
+.container > h1{
+  text-align: right;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.light{
+  color: c.$light_textColor;
+  border-color: c.$light_textColor;
+}

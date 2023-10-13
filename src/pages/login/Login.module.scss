@@ -21,6 +21,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
   //background-color: red;
 }
 
@@ -38,14 +39,46 @@
   justify-content: space-between;
   align-items: center;
   //background-color: red;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 
 }
 
 .backIcon{
+  border: transparent;
+  cursor: pointer;
   font-size: 24px;
-
 }
+.backIcon:hover{
+  color: c.$dark_hoverColor;
+  font-size: 25px
+}
+.backIcon:focus-visible{
+  outline-color: c.$light_secondaryColor;
+}
+.titleWrapper{
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  color: c.$dark_textColor;
+}
+.titleWrapper > h1{
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.titleWrapper > h2{
+  margin: 0;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 
 .formWrapper{
   width: 100%;
@@ -97,56 +130,70 @@
   width: 146px;
   color: c.$dark_textColor;
 }
+.rememberCheckWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
-
-/* IhrStil.module.css */
-
-/* Standardstil für die Checkbox */
-input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 1px solid c.$dark_textColor; /* Weiße 1px-Border */
-  border-radius: 5px; /* 5px Radius */
-  outline: none;
+.link{
   cursor: pointer;
-  position: relative;
+  color: c.$dark_primaryColor;
+  text-align: right;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.link:hover{
+  font-weight: 600
+}
+.link:active{
+  filter: brightness(80%);
+}
+.link:focus-visible{
+  outline-color: c.$dark_hoverColor;
 }
 
-/* Hintergrundfarbe der Checkbox, wenn ausgewählt */
-input[type="checkbox"]:checked {
-  background-color: c.$dark_hoverColor;
-  border: none;
+.or{
+  cursor: default;
+  color: c.$dark_textColor;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-
-/* Pseudo-Element für das Häkchen */
-input[type="checkbox"]:checked::before {
-  content: "\2713"; /* Zeichen für ein Häkchen (✓) */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: c.$dark_textColor; /* Weiße Farbe für das Häkchen */
-  font-size: 16px;
+.loginButtonsWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.0625rem;
 }
-
-
-
+.otherLoginsWrapper{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
 
 .light{
-  &input[type="checkbox"]:checked:before{
+  color: c.$light_textColor;
+
+  &.backIcon:hover{
+    color: c.$light_hoverColor;
+    font-size: 25px
+  }
+  &.backIcon:focus-visible{
+    outline-color: c.$light_secondaryColor;
+  }
+  &.or{
     color: c.$light_textColor;
   }
-  &input[type="checkbox"]:checked{
-    background-color: c.$light_secondaryColor;
-  }
-  &input[type="checkbox"]{
-    border-color: c.$light_textColor;
-  }
-
-  color: c.$light_textColor;
   &.previewWrapper{
     background-color: c.$light_secondaryColor;
   }

@@ -1,5 +1,5 @@
 import styles from "./Small_Panel.module.scss";
-import { theme } from "../helper/variables";
+import { theme } from "../../helper/variables";
 
 export default function Small_Panel() {
   return (

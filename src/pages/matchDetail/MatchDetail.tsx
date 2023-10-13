@@ -2,7 +2,7 @@ import styles from "./MatchDetail.module.scss";
 import { titleContext } from "../../contexts/TitleContext";
 import SideContent from "../../components/Side-Content/SideContent";
 import Small_Panel from "../../components/Small_Panel/Small_Panel";
-import { theme } from "../../components/helper/variables";
+import { theme } from "../../helper/variables";
 import {
   MatchScoreCard,
   MatchScoreData,

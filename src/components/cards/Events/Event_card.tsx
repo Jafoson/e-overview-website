@@ -1,6 +1,6 @@
 import styles from "./Event-card.module.scss";
 import { EventInformationData } from "../../Side_scrolls/SideScroll";
-import { theme } from "../../helper/variables";
+import { theme } from "../../../helper/variables";
 
 interface IEventCard {
   event: EventInformationData;

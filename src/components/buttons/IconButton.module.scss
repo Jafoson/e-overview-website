@@ -1,0 +1,40 @@
+@use "../../constants/colors" as c;
+
+.container{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  box-sizing: border-box;
+  padding: 2px;
+  border: 2px solid transparent;
+  color: c.$dark_textColor;
+}
+.container:hover{
+  color: c.$dark_hoverColor;
+}
+.container:focus-visible{
+  border-radius: 8px;
+  outline: none;
+  border-color: c.$dark_hoverColor;
+}
+.container:active{
+  filter: brightness(120%);
+    color: c.$dark_hoverColor;
+}
+
+.light{
+  &.container{
+    color: c.$light_textColor;
+  }
+  &.container:hover{
+    color: c.$light_hoverColor;
+  }
+  &.container:focus-visible{
+    border-color: c.$light_hoverColor;
+  }
+  &.container:active{
+    color: c.$light_hoverColor;
+  }
+}

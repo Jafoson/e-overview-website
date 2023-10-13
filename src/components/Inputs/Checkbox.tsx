@@ -1,13 +1,13 @@
 import {useState} from "react";
+import styles from "./Checkbox.module.scss";
+import {theme} from "../../helper/variables.tsx";
 
 export interface ICheckbox{
     label?: string
-    id: string
-    name: string
     value: string
 }
 
-export function Checkbox({label, id, name, value}: ICheckbox) {
+export function Checkbox({label, value}: ICheckbox) {
         const [isChecked, setIsChecked] = useState(false);
 
         const handleCheckboxChange = () => {
@@ -15,9 +15,9 @@ export function Checkbox({label, id, name, value}: ICheckbox) {
         };
 
     return (
-        <div>
+        <div className={theme({styles: styles, name: "container"})}>
+            <input type={"checkbox"} value={value} checked={isChecked} onChange={handleCheckboxChange}/>
             <label htmlFor={"checkbox"}>{label}</label>
-            <input type={"checkbox"} id={id} value={value} name={name} checked={isChecked} onChange={handleCheckboxChange}/>
         </div>
     );
 }

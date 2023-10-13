@@ -1,5 +1,5 @@
 import styles from "./PlayerOverviewCard.module.scss";
-import { theme } from "../../helper/variables";
+import { theme } from "../../../helper/variables";
 import playerPlaceHolder from "../../../assets/placeholder/placeholder_player.svg";
 
 interface IPlayerOverviewCard {

@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { CSSProperties, useEffect, useState } from "react";
 import styles from "./Home_Intern_Push.module.scss";
-import TextButton from "../Buttons";
+import TextButton from "../buttons/Buttons.tsx";
 
 const slideStyles: CSSProperties = {
   width: "100%",

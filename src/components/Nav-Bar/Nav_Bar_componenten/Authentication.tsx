@@ -1,4 +1,4 @@
-import TextButton from "../../Buttons";
+import TextButton from "../../buttons/Buttons.tsx";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./Authenfication.module.scss";

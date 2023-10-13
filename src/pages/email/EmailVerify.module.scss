@@ -1,0 +1,54 @@
+@use "../../constants/colors.scss" as c;
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 32px 32px 0 32px;
+  color: c.$dark_textColor;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.topBarWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.logo {
+  height: 5rem;
+}
+.font {
+  font-size: 24px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+  line-height: normal;
+  word-wrap: break-word;
+}
+.h2 {
+  font-size: 32px;
+}
+.mail {
+  font-size: 36px;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.buttonWrapper {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+}

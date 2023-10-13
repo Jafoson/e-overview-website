@@ -1,5 +1,5 @@
 import styles from "./Match_card.module.scss";
-import { theme } from "../../helper/variables";
+import { theme } from "../../../helper/variables";
 import { NavigateFunction, useNavigate } from "react-router-dom";
 
 export type MatchData = {

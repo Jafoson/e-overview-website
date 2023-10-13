@@ -1,9 +1,9 @@
-export interface Ivalidation {
+ export interface Ivalidation {
     isValid: boolean
     errors: string[]
 }
 
-export const passwordValidation = (password: string): { isValid: boolean, errors: string[] } => {
+export const passwordValidation = (password: string): string[] => {
     const errors: string[] = [];
 
     if (password.length < 8) {
@@ -30,13 +30,10 @@ export const passwordValidation = (password: string): { isValid: boolean, errors
         errors.push("Password must contain at least one special character (@#$%^&+=!*_).");
     }
 
-    return {
-        isValid: errors.length === 0,
-        errors: errors,
-    };
+    return errors;
 };
 
-export const emailValidation = (email: string): { isValid: boolean, errors: string[] } => {
+export const emailValidation = (email: string):string[] => {
     const errors: string[] = [];
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -48,13 +45,10 @@ export const emailValidation = (email: string): { isValid: boolean, errors: stri
         errors.push("E-Mail address is invalid");
     }
 
-    return {
-        isValid: errors.length === 0,
-        errors: errors
-    };
+    return errors;
 }
 
-export const usernameValidation = (email: string): { isValid: boolean, errors: string[] } => {
+export const usernameValidation = (email: string): string[]  => {
     const errors: string[] = [];
 
     if (email.length < 4){
@@ -65,24 +59,16 @@ export const usernameValidation = (email: string): { isValid: boolean, errors: s
         errors.push("Username must not exceed 32 characters");
     }
 
-    return{
-        isValid: errors.length === 0,
-        errors: errors
-    }
+    return errors
+
 }
 
-export const loginValidation = (emailUsername: string, password: string): {passwordErrors: string[], usersErrors: string[], errorMessage: string } => {
-    const passwordErrors: string[] = [];
+export const loginValidation = (emailUsername: string, password: string): {passwordErrors: string[], usersErrors: string[] } => {
+    let passwordErrors: string[] = [];
     const usersErrors: string[] = [];
 
-    if (password.length < 8){
-        passwordErrors.push("Password must be at least 8 characters long.");
-    }
+    passwordErrors = passwordValidation(password)
 
-    // TODO überleg ob es 32 oder 64 zeichen lang sein soll...
-    if (password.length > 32) {
-        passwordErrors.push("Password must not exceed 32 characters.");
-    }
     if (emailUsername.length < 4){
         usersErrors.push("Username/E-Mail must be at least 4 characters long.");
     }
@@ -90,11 +76,28 @@ export const loginValidation = (emailUsername: string, password: string): {passw
         usersErrors.push("Username/E-Mail must not exceed 64 characters");
     }
 
-    const isValid = passwordErrors.length === 0 || usersErrors.length === 0 ? "": "Password or E-Mail/Username is invalid"
 
     return{
         passwordErrors: passwordErrors,
         usersErrors: usersErrors,
-        errorMessage: isValid
     }
+}
+
+export const identicalPasswordsValidation = (password: string, repeatPassword: string):{passwordErrors: string[], repeatPasswordErrors: string[]} => {
+    const passwordErrors :string[] = passwordValidation(password);
+    const repeatPasswordErrors: string[] = []
+
+
+    if (password != repeatPassword && repeatPassword.length != 0){
+        repeatPasswordErrors.push("These passwords do not match. Try again.")
+    }
+    if (repeatPassword.length == 0){
+        repeatPasswordErrors.push("Please confirm password.")
+    }
+
+    return{
+        passwordErrors: passwordErrors,
+        repeatPasswordErrors: repeatPasswordErrors
+    }
+
 }

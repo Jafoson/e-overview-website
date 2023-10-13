@@ -4,7 +4,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Link.module.scss";
 import { ThemeContext } from "../../../contexts/ThemeContext";
-import { theme } from "../../helper/variables";
+import { theme } from "../../../helper/variables";
 
 export interface IDropdown {
   path: string;

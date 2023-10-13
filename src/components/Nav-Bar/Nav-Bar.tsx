@@ -10,7 +10,7 @@ import styles from "./Nav-Bar.module.scss";
 
 import Top_Bar from "../Top_Bar/Top_Bar.tsx";
 import TitleProvider from "../../contexts/TitleContext.tsx";
-import { theme } from "../helper/variables.tsx";
+import { theme } from "../../helper/variables.tsx";
 
 export default function Nav_Bar() {
   // const screenWidth = useScreenWidthDetector();

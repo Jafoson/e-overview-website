@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -21,6 +20,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .previewWrapper {
@@ -36,11 +36,48 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .backIcon {
+  border: transparent;
+  cursor: pointer;
   font-size: 24px;
+}
+
+.backIcon:hover {
+  color: #704988;
+  font-size: 25px;
+}
+
+.backIcon:focus-visible {
+  outline-color: #9661ca;
+}
+
+.titleWrapper {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  color: #e9ece3;
+}
+
+.titleWrapper > h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.titleWrapper > h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .formWrapper {
@@ -92,49 +129,74 @@
   color: #e9ece3;
 }
 
-/* IhrStil.module.css */
-/* Standardstil für die Checkbox */
-input[type=checkbox] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #e9ece3; /* Weiße 1px-Border */
-  border-radius: 5px; /* 5px Radius */
-  outline: none;
+.rememberCheckWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
   cursor: pointer;
-  position: relative;
+  color: #377fa4;
+  text-align: right;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
 }
 
-/* Hintergrundfarbe der Checkbox, wenn ausgewählt */
-input[type=checkbox]:checked {
-  background-color: #704988;
-  border: none;
+.link:hover {
+  font-weight: 600;
 }
 
-/* Pseudo-Element für das Häkchen */
-input[type=checkbox]:checked::before {
-  content: "✓"; /* Zeichen für ein Häkchen (✓) */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #e9ece3; /* Weiße Farbe für das Häkchen */
-  font-size: 16px;
+.link:active {
+  filter: brightness(80%);
+}
+
+.link:focus-visible {
+  outline-color: #704988;
+}
+
+.or {
+  cursor: default;
+  color: #e9ece3;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.loginButtonsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.0625rem;
+}
+
+.otherLoginsWrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
 }
 
 .light {
   color: #8c8ba0;
 }
-.lightinput[type=checkbox]:checked:before {
+.light.backIcon:hover {
+  color: #b089d7;
+  font-size: 25px;
+}
+.light.backIcon:focus-visible {
+  outline-color: #9661ca;
+}
+.light.or {
   color: #8c8ba0;
-}
-.lightinput[type=checkbox]:checked {
-  background-color: #9661ca;
-}
-.lightinput[type=checkbox] {
-  border-color: #8c8ba0;
 }
 .light.previewWrapper {
   background-color: #9661ca;

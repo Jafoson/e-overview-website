@@ -1,0 +1,64 @@
+@use "../../constants/colors" as c;
+
+.container{
+  color: c.$dark_textColor;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.container > label{
+  color: c.$dark_textColor;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.container > input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid c.$dark_textColor;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.5s ease;
+}
+
+.container > input[type="checkbox"]:checked{
+  background-color: c.$dark_hoverColor;
+  border: none;
+}
+.container > input[type="checkbox"]:checked:before{
+  content: "\2713";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+}
+
+.light{
+  &.container{
+    color: c.$light_textColor;
+  }
+  &.container > input[type="checkbox"]{
+    border-color: c.$light_textColor;
+  }
+  &.container > input[type="checkbox"]:checked{
+    background-color: c.$light_hoverColor;
+  }
+  .container > input[type="checkbox"]:checked:before{
+    color: c.$light_textColor;
+  }
+  &.container > label{
+    color: c.$light_textColor;
+  }
+}

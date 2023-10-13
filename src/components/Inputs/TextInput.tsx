@@ -1,6 +1,6 @@
 import {ChangeEventHandler, useState} from "react";
 import styles from "./TextInput.module.scss";
-import {theme} from "../helper/variables.tsx";
+import {theme} from "../../helper/variables.tsx";
 import {Icon} from "@iconify/react/dist/iconify.js";
 
 export interface ITextInput{
@@ -10,11 +10,27 @@ export interface ITextInput{
     placeholder?: string
     value: string
     onChange: ChangeEventHandler<HTMLInputElement>
-    success: boolean;
-    failure: boolean
+    errorsMessages?: string[]
+    success?: boolean
+    failure?: boolean
 }
 
-export function TextInput({label, id, name, placeholder, value, onChange, success = false, failure = false}:ITextInput) {
+//FIXME no Error rendert fix this
+
+export function TextInput({label, id, name, placeholder, value, onChange, success = false, failure = false, errorsMessages}:ITextInput) {
+
+    const ErrorComponent = (errorMessages: string[])=>{
+        if (errorMessages.length === 0){
+            return <></>
+        }
+        return(<div className={styles.errorWrapper}>
+            {errorMessages.map((errorMessage, index) => (
+                <li className={styles.errorText} key={index}>{errorMessage}</li>
+            ))}
+        </div>);
+    }
+
+
     return (
             <div className={styles.wrapper}>
                 <label className={theme({styles: styles, name: "textInputLabel"})} htmlFor={name}>{label}</label>
@@ -29,12 +45,27 @@ export function TextInput({label, id, name, placeholder, value, onChange, succes
                         onChange={onChange}
                     />
                 </div>
+                {ErrorComponent(errorsMessages || [])}
         </div>
     );
 }
 
-export function PasswordInput({label, id, name, placeholder, value, onChange,  success = false, failure = false}:ITextInput) {
-    const [isPasswordVisible, setPasswortVisible] = useState(true)
+export function PasswordInput({label, id, name, placeholder, value, onChange,  success = false, failure = false, errorsMessages}:ITextInput) {
+    const [isPasswordVisible, setPasswordVisible] = useState(true)
+
+    const ErrorComponent = (errorMessages: string[])=>{
+        if (errorMessages.length === 0){
+            return <></>
+        }
+        return(<div className={styles.errorWrapper}>
+            {errorMessages.map((errorMessage, index) => (
+                <li className={styles.errorText} key={index}>{errorMessage}</li>
+            ))}
+        </div>);
+    }
+
+
+
 
     return (
         <div className={styles.wrapper}>
@@ -49,11 +80,12 @@ export function PasswordInput({label, id, name, placeholder, value, onChange,  s
                     value={value}
                     onChange={onChange}
                 />
-                <button className={theme({styles: styles, name: "icon"})} onClick={() => setPasswortVisible(!isPasswordVisible)}>
+                <button  type="button" tabIndex={0} className={theme({styles: styles, name: "icon"})} onClick={() => setPasswordVisible(!isPasswordVisible)}>
                     <Icon   icon={isPasswordVisible? "mdi:eye": "mdi:eye-off"}  />
                 </button>
 
             </div>
+            {ErrorComponent(errorsMessages || [])}
         </div>
     );
 }

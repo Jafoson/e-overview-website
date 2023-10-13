@@ -1,3 +1,41 @@
+.container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  box-sizing: border-box;
+  padding: 2px;
+  border: 2px solid transparent;
+  color: #e9ece3;
+}
 
+.container:hover {
+  color: #704988;
+}
+
+.container:focus-visible {
+  border-radius: 8px;
+  outline: none;
+  border-color: #704988;
+}
+
+.container:active {
+  filter: brightness(120%);
+  color: #704988;
+}
+
+.light.container {
+  color: #8c8ba0;
+}
+.light.container:hover {
+  color: #b089d7;
+}
+.light.container:focus-visible {
+  border-color: #b089d7;
+}
+.light.container:active {
+  color: #b089d7;
+}
 
 /*# sourceMappingURL=IconButton.module.css.map */

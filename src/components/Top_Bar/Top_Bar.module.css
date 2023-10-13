@@ -66,6 +66,14 @@
     width: calc(100% - 16px);
   }
 }
+.registerWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 0.675rem;
+  margin-left: 6px;
+  margin-right: 16px;
+}
+
 .light.title {
   color: #8c8ba0;
 }

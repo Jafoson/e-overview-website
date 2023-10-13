@@ -1,4 +1,4 @@
-import { theme } from "../../helper/variables";
+import { theme } from "../../../helper/variables";
 import styles from "./Profil.module.scss";
 
 export default function Nav_Bar_profil() {
