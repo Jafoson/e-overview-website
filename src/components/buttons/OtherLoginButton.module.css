@@ -1,0 +1,41 @@
+.buttonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 16.125rem;
+  height: 2.6875rem;
+  color: #e9ece3;
+  cursor: pointer;
+  border-radius: 0.9375rem;
+  border: 2px solid #e9ece3;
+  display: flex;
+  justify-content: center;
+  padding: 0 32px;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.logo {
+  color: #e9ece3;
+  width: 1.6875rem;
+  height: 1.6875rem;
+  flex-shrink: 0;
+}
+
+.container > h1 {
+  text-align: right;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.light {
+  color: #8c8ba0;
+  border-color: #8c8ba0;
+}
+
+/*# sourceMappingURL=OtherLoginButton.module.css.map */

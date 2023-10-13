@@ -1,0 +1,203 @@
+@use "../../constants/colors.scss" as c;
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 32px 32px 0 32px;
+  color: c.$dark_textColor;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.contentWrapper{
+  box-sizing: border-box;
+  padding-right: 32px;
+  flex: 0.5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  //background-color: red;
+}
+
+.previewWrapper{
+  height: calc(100% - 32px);
+  flex: 0.5;
+  border-radius: 15px;
+  background-color: c.$dark_secondaryColor;
+}
+
+.logoWrapper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  //background-color: red;
+  margin-bottom: 16px;
+
+}
+
+.backIcon{
+  border: transparent;
+  cursor: pointer;
+  font-size: 24px;
+}
+.backIcon:hover{
+  color: c.$dark_hoverColor;
+  font-size: 25px
+}
+.backIcon:focus-visible{
+  outline-color: c.$light_secondaryColor;
+}
+.titleWrapper{
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  color: c.$dark_textColor;
+}
+.titleWrapper > h1{
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.titleWrapper > h2{
+  margin: 0;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+.formWrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.formGroup{
+  display: flex;
+  flex-direction: column;
+}
+
+.finput{
+  width: 100%;
+  padding: 4px 8px 4px 8px;
+  border-radius: 5px;
+  border-color: c.$dark_textColor;
+  border-width: 1px;
+
+}
+
+.content{
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  //background-color: #4bff00;
+}
+
+.rememberWrapper{
+  margin-top: -8px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rememberCheckWrapper{
+  gap: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo{
+  width: 146px;
+  color: c.$dark_textColor;
+}
+.rememberCheckWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link{
+  cursor: pointer;
+  color: c.$dark_primaryColor;
+  text-align: right;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.link:hover{
+  font-weight: 600
+}
+.link:active{
+  filter: brightness(80%);
+}
+.link:focus-visible{
+  outline-color: c.$dark_hoverColor;
+}
+
+.or{
+  cursor: default;
+  color: c.$dark_textColor;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.loginButtonsWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.0625rem;
+}
+.otherLoginsWrapper{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.light{
+  color: c.$light_textColor;
+
+  &.backIcon:hover{
+    color: c.$light_hoverColor;
+    font-size: 25px
+  }
+  &.backIcon:focus-visible{
+    outline-color: c.$light_secondaryColor;
+  }
+  &.or{
+    color: c.$light_textColor;
+  }
+  &.previewWrapper{
+    background-color: c.$light_secondaryColor;
+  }
+}
+
